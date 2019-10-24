@@ -43,7 +43,7 @@ sed "s:>:*\n>:g" output/gene_prediction/gene.fasta | sed -n "/partial=00/,/*/p"|
 
 mkdir output/blast/
 
-./soft/blastn -db databases/resfinder.fna -query output/gene_prediction/genes_full.fasta -evalue 0.001 -perc_identity 80 -out output/blast/blast_res.txt
+./soft/blastn -db databases/resfinder.fna -query output/gene_prediction/genes_full.fasta -evalue 0.001 -perc_identity 80 -qcov_hsp_perc 80 -out output/blast/blast_res.txt
 
 
 
